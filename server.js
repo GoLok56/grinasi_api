@@ -8,7 +8,7 @@ const app = express();
 // Setting up the middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use('api', require('./router/api'));
+app.use('/api', require('./router/api'));
 
 app.get('/', function(req, res){
   res.send("Grinasia beli pulsa API ...");
